@@ -5,7 +5,7 @@
 {% assign first_yr = 0 %}
 {% assign last_yr = 0 %}
 
-{% assign items = site.pages | where: "event","symposium" | sort: 'year' %}
+{% assign items = site.pages | where: "event","iticse" | sort: 'year' %}
 {% for c in items %}
   {% if forloop.first == true %}
     {% assign first_yr = c.year %}
@@ -26,7 +26,7 @@
   {% endif %}
 {% endfor %}
 
-> <a name="top" id="top"></a> {% if page.year <= first_yr %}{% else %} <a href="{{prev}}.html">← {{prev}}</a> &#124; {% endif %}<a href="index.html">Technical Symposium Index</a> {% if page.year == last_yr %}{% else %} &#124; <a href="{{next}}.html">{{next}} →</a>{% endif %}
+> <a name="top" id="top"></a> {% if page.year <= first_yr %}{% else %} <a href="{{prev}}.html">← {{prev}}</a> &#124; {% endif %}<a href="index.html">ITiCSE Index</a> {% if page.year == last_yr %}{% else %} &#124; <a href="{{next}}.html">{{next}} →</a>{% endif %}
 
 <table class="table table-sm">
   <tbody>

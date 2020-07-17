@@ -78,7 +78,11 @@ Policies set by the SIGCSE Board regarding conferences:
 Follow the links to conference web sites of these \"recent\"
 conferences:
 
--   [ITiCSE 2020](http://iticse.hosting.acm.org/), June 15 - 19, Trondheim, Norway
+{% assign items = site.pages | where: "event","iticse" | sort: 'year' | reverse %}
+{% for c in items %}
+- [{{c.title}}]({{c.year}}.html): {{c.location}}{% if c.doi %}, [proceedings]({{c.doi}}){%endif%}{% endfor %}
+
+<!-- -   [ITiCSE 2020](http://iticse.hosting.acm.org/), June 15 - 19, Trondheim, Norway
 -   [ITiCSE 2019](https://iticse.acm.org/ITiCSE2019/), July 15-17, Aberdeen, Scotland
 -   [ITiCSE 2018](http://iticse.acm.org/ITiCSE2018/), July 2-4, Larnaca, Cyprus
 -   [ITiCSE 2017](https://iticse.acm.org/ITiCSE2017/), July 3-5, Università di Bologna, Italy
@@ -98,7 +102,7 @@ conferences:
 -   [ITiCSE 2003](http://iticse2003.uom.gr/), Thessaloniki, Greece
 -   [ITiCSE 2002](http://www.iticse2002.dk/), Aarhus, Denmark
 -   [ITiCSE 2001](http://www.cs.ukc.ac.uk/events/iticse2001/index.html), Canterbury, Kent, United Kingdom
--   [ITiCSE 2000](http://www.cs.helsinki.fi/events/iticse/), Helsinki, Finland
+-   [ITiCSE 2000](http://www.cs.helsinki.fi/events/iticse/), Helsinki, Finland -->
 
 ### ITiCSE History
 
